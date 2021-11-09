@@ -1,4 +1,4 @@
-CC = gcc -fsanitize=address
+CC = gcc 
 CFLAGS = -g -Wall -Wextra -Werror 
 
 SRCMODULES_A = minishell.c
@@ -20,4 +20,4 @@ re : fclean all
 
 .PHONY : all clean fclean re
 
-#
+#-fsanitize=address
