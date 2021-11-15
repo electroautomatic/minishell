@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   ft_cd.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbalman <mbalman@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 13:02:53 by mbalman           #+#    #+#             */
-/*   Updated: 2021/11/10 13:13:27 by mbalman          ###   ########.fr       */
+/*   Created: 2021/11/10 11:36:33 by mbalman           #+#    #+#             */
+/*   Updated: 2021/11/10 11:49:53 by mbalman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINISHELL_H
-# define MINISHELL_H
+#include "../minishell.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <dirent.h>
-# include <stdlib.h>
+void	ft_cd(char **argv)
+{
+	char	buf[200];
 
-void	ft_cd (char **argv);
-#endif
+	printf("Current directory is: %s\n", getcwd(buf, 200));
+	printf("New directory is: %s\n", argv[1]);
+	if (chdir(argv[1]) == -1)
+	{
+		perror("Error:");
+	}
+	printf("Current directory is: %s\n", getcwd(buf, 200));
+}

@@ -1,7 +1,8 @@
 CC = gcc 
 CFLAGS = -g -Wall -Wextra -Werror 
 
-SRCMODULES_A = minishell.c
+SRCMODULES_A = buildins/ft_cd.c \
+				minishell.c
 OBJMODULES_A = $(patsubst %.c,%.o,$(SRCMODULES_A))
 
 
