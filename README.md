@@ -1,6 +1,6 @@
 # minishell
 
-🖥 🐚 The project about how to communicate with a computer using interactive lines of commands like a bash or zsh
+🖥  The project about how to communicate with a computer using interactive lines of commands like a bash or zsh
 
 ### School command project
 
